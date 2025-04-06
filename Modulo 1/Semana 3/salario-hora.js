@@ -10,5 +10,21 @@ let salarioFinal = 0 // variável para receber o resultado final do cálculo
 
 // cálculo simples de salário final sem considerar horas extras
 
-salarioFinal = horasTrabalhadas*valorHoraBase
-console.log ("O funcionário " + nome + " trabalhou " + horasTrabalhadas + " e irá receber um total de R$" + salarioFinal + " pelo seu esforço")
+//salarioFinal = horasTrabalhadas*valorHoraBase
+//console.log ("O funcionário " + nome + " trabalhou " + horasTrabalhadas + " e irá receber um total de R$" + salarioFinal + " pelo seu esforço")
+//comentado pra manter de referência, mas não será parte do cálculo final
+
+// cálculo de horas extras simples
+
+function quantaHoraExtra (horasTrabalhadas) {
+    if (horasTrabalhadas >220) {
+        horasExtras = horasTrabalhadas-220 //separa o valor de hora extra
+        horasSemHoraExtra = 220 //separa o valor de hora normal
+        salarioFinal = (horasSemHoraExtra*valorHoraBase) + (horasExtras*(valorHoraBase*2)) //calcula a soma dos valores de hora normal e extra
+        }
+    else {
+        salarioFinal = horasTrabalhadas*valorHoraBase // calcula somente hora normal caso o total seja menor ou igual a 220 horas
+    }
+}
+quantaHoraExtra(horasTrabalhadas) //chamar a função para calcular
+console.log ("O funcionário " + nome + " trabalhou " + horasTrabalhadas + " e irá receber um total de R$" + salarioFinal + " pelo seu esforço") //resultado de texto no console com o número de horas trabalhadas e o salário final
