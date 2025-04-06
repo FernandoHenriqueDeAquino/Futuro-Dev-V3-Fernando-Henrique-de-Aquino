@@ -8,3 +8,7 @@ let valorHoraBase = 10 // valor base por hora referente ao setor Operacional. Ad
 let horasSemHoraExtra = 0 // variável pra contabilizar as horas até 220 pro cálculo final
 let salarioFinal = 0 // variável para receber o resultado final do cálculo
 
+// cálculo simples de salário final sem considerar horas extras
+
+salarioFinal = horasTrabalhadas*valorHoraBase
+console.log ("O funcionário " + nome + " trabalhou " + horasTrabalhadas + " e irá receber um total de R$" + salarioFinal + " pelo seu esforço")
